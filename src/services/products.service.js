@@ -1,5 +1,5 @@
-const productNameValidate = require('../middlewares/productNameValidate');
 const { productsModel } = require('../models');
+
 const findAllProducts = async () => {
   const products = await productsModel.findAllProducts();
 
