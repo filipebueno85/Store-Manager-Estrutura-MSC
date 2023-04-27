@@ -7,12 +7,13 @@ const createSales = async () => {
 };
 
 const createSalesProduct = async (productArray) => {
-  const findProductId = await Promise.all(productArray.map( async (product) => {
+  const findProductId = await Promise.all(productArray.map(async (product) => {
     const productById = await productsModel.findProductById(product.productId);
     return productById;
   }));
   
-  if (findProductId.some((id) => id === undefined)) return { type: 404, message: 'Product not found' };
+  if (findProductId
+    .some((id) => id === undefined)) return { type: 404, message: 'Product not found' };
   const saleId = await salesModel.createSales();
   const productSales = await Promise.all(productArray.map(async (product) => {
     const addSalesProduct = await salesModel
