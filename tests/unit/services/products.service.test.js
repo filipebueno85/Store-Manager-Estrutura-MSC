@@ -4,7 +4,7 @@ const sinon = require('sinon');
 const { productsModel } = require('../../../src/models');
 const { productsService } = require('../../../src/services');
 
-const { allProducts } = require('./mocks/products.service.mock');
+const { allProducts, productCreated, validProduct, newProduct, invalidProduct } = require('./mocks/products.service.mock');
 
 describe('Testando a camada  service ', function () {
   it('exibindo todos os produtos', async function () {
@@ -45,6 +45,18 @@ describe('Testando a camada  service ', function () {
 
     expect(result.type).to.equal(404);
     expect(result.message).to.equal('Product not found');
+  });
+
+  describe('cadastro de um produto com valores válidos', function () {
+    it('retorna o id de um produto cadastrado', async function () {
+      sinon.stub(productsModel, 'createProduct').resolves(6);
+      sinon.stub(productsModel, 'findProductById').resolves(productCreated);
+
+      const result = await productsService.createProduct(validProduct);
+
+      expect(result.type).to.equal(null);
+      expect(result.message).to.deep.equal(productCreated);
+    });
   });
 
   afterEach(function () {

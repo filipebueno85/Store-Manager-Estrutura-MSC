@@ -11,8 +11,13 @@ const allProducts = [
     "id": 3,
     "name": "Escudo do Capitão América"
   }
-]
+];
+
+const newProduct = {
+  name: "Cadeira de plástico"
+};
 
 module.exports = {
   allProducts,
+  newProduct,
 };

@@ -23,7 +23,7 @@ const createProduct = async (req, res) => {
 
   const { type, message } = await productsService.createProduct(name);
 
-  if (type) return res.status(500).json({ message });
+  // if (type) return res.status(type).json({ message });
 
   return res.status(201).json(message);  
 };

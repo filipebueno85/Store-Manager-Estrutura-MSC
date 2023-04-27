@@ -18,7 +18,7 @@ const createProduct = async (name) => {
   const product = await productsModel.createProduct(name);
   const newProduct = await productsModel.findProductById(product);
 
-  if (!newProduct) return { type: 500, message: 'error!' };
+  // if (!newProduct) return { type: 500, message: 'error!' };
 
   return { type: null, message: newProduct };
 };
