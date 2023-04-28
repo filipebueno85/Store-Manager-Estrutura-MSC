@@ -10,7 +10,7 @@ const getAllSales = async () => {
 
 const getSalesById = async (saleId) => {
   const sales = await salesModel.getSalesById(saleId);
-  console.log(sales);
+  // console.log(sales);
   return { type: null, message: sales };
 };
 
@@ -38,9 +38,16 @@ const createSalesProduct = async (productArray) => {
   return { type: null, message: { id: saleId, itemsSold: productSales } };
 };
 
+const deleteSales = async (id) => {
+  const sales = await salesModel.deleteSales(id);
+
+  return { type: null, message: sales };
+};
+
 module.exports = {
   getAllSales,
   getSalesById,
   createSales,
   createSalesProduct,
+  deleteSales,
 };

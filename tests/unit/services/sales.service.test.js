@@ -12,7 +12,7 @@ describe('Testando a camada sales service ', function () {
 
 
       const result = await salesService.createSalesProduct(saleJson2);
-      console.log(result);
+      // console.log(result);
       expect(result.type).to.equal(null);
       expect(result.message).to.have.keys('id', 'itemsSold');
     });
