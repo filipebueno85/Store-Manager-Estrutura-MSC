@@ -9,12 +9,12 @@ const getAllSales = async () => {
   return sales;
 };
 
-const getAllSalesProducts = async () => {
-  const [sales] = await connection.execute(
-    'SELECT * FROM StoreManager.sales_products;',
-  );
-  return sales;
-};
+// const getAllSalesProducts = async () => {
+//   const [sales] = await connection.execute(
+//     'SELECT * FROM StoreManager.sales_products;',
+//   );
+//   return sales;
+// };
 
 const getSalesById = async (saleId) => {
   const [sale] = await connection.execute(
@@ -53,7 +53,7 @@ const createSalesProduct = async (saleId, productId, quantity) => {
 module.exports = {
   getAllSales,
   getSalesById,
-  getAllSalesProducts,
+  // getAllSalesProducts,
   // getProductSalesById,
   createSales,
   createSalesProduct,

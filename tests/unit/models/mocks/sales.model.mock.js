@@ -10,7 +10,28 @@ const newSales = {
       "quantity": 5
     }
   ]
-}
+};
+
+const allSales = [
+  {
+    "saleId": 1,
+    "date": "2023-04-28T12:45:32.000Z",
+    "productId": 1,
+    "quantity": 5
+  },
+  {
+    "saleId": 1,
+    "date": "2023-04-28T12:45:32.000Z",
+    "productId": 2,
+    "quantity": 10
+  },
+  {
+    "saleId": 2,
+    "date": "2023-04-28T12:45:32.000Z",
+    "productId": 3,
+    "quantity": 15
+  }
+]
 
 const saleJson = [
   {
@@ -26,4 +47,5 @@ const saleJson = [
 module.exports = {
   newSales,
   saleJson,
+  allSales,
 };
