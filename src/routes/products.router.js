@@ -5,6 +5,8 @@ const productNotFoundValidate = require('../middlewares/productNotFoundValidate'
 
 const router = express.Router();
 
+router.get('/products/search', productsController.searchProduct);
+
 router.get('/products', productsController.findAllProducts);
 
 router.get('/products/:id', productsController.findProductById);

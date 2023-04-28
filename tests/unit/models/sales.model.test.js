@@ -25,6 +25,17 @@ describe('Testando a camada sales model ', function () {
       const result = await salesModel.getAllSales();
 
       expect(result).to.be.deep.equal(allSales);
+      expect(result).to.be.an('array');
+      expect(result).to.have.length(3);
+    });
+
+    it('listando sem nenhum dado', async () => {
+      sinon.stub(connection, 'execute').resolves([[]]);
+
+      const sale = await salesModel.getAllSales();
+
+      expect(sale).to.be.an('array');
+      expect(sale).to.have.length(0);
     });
 
     it('Recuperando uma venda a partir do seu id', async function () {

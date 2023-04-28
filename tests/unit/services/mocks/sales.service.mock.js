@@ -32,6 +32,20 @@ const allSales = [
     "quantity": 15
   }
 ]
+const deletedSales = [
+  {
+    "saleId": 1,
+    "date": "2023-04-28T12:45:32.000Z",
+    "productId": 2,
+    "quantity": 10
+  },
+  {
+    "saleId": 2,
+    "date": "2023-04-28T12:45:32.000Z",
+    "productId": 3,
+    "quantity": 15
+  }
+]
 
 const objSale = {
   "productId": 1,
@@ -62,4 +76,5 @@ module.exports = {
   saleJson2,
   objSale,
   allSales,
+  deletedSales,
 };

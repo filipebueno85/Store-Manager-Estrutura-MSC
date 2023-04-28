@@ -13,6 +13,13 @@ const allProducts = [
   }
 ];
 
+const saleJonUpdate = [
+  {
+    "productId": 1,
+    "quantity": 10
+  }
+]
+
 const newProduct = {
   name: 'Coleira de gato'
 }
@@ -22,13 +29,25 @@ const productCreated = {
   name: 'Coleira de gato'
 };
 
+const saleUpdate = {
+  "saleId": 1,
+  "itemsUpdated": [
+    {
+      "productId": 1,
+      "quantity": 10
+    }
+  ]
+};
+
 const validProduct = 'Coleira de gato';
 const invalidProduct = 'as';
 
 module.exports = {
   allProducts,
   productCreated,
+  saleJonUpdate,
   newProduct,
   validProduct,
   invalidProduct,
+  saleUpdate,
 };

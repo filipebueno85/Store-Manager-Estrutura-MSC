@@ -59,6 +59,17 @@ describe('Testando a camada  service ', function () {
     });
   });
 
+  describe('Cadastrar um produto', function () {
+    it('não retorna erros', async function () {
+      sinon.stub(productsModel, 'createProduct').resolves(allProducts);
+
+      const product = await productsService.createProduct(newProduct);
+
+      expect(product.type).to.equal(null);
+    });
+  });
+
+
   afterEach(function () {
     sinon.restore();
   });

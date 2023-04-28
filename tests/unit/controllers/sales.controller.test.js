@@ -44,6 +44,7 @@ describe('Testando a camada  sales controller', function () {
 
       expect(res.status).to.have.been.calledWith(200);
       expect(res.json).to.have.been.calledWith(allSales);
+      expect(res).to.be.an('object');
     });
 
     it('ao passar um id inválido deve retornar um erro', async function () {
@@ -62,14 +63,13 @@ describe('Testando a camada  sales controller', function () {
 
 
       await salesController.getSalesById(req, res);
-
- 
     
       expect(res.status).to.have.been.calledWith(404);
-   
+
       expect(res.json).to.have.been.calledWith({ message: 'Sale not found' });
     });
   });
+
   afterEach(function () {
     sinon.restore();
   });

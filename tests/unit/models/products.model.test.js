@@ -26,7 +26,7 @@ describe('Testando a camada  model ', function () {
     expect(result).to.be.deep.equal(allProducts[0]);
   });
 
-  describe('Cadastro de um novo produto com a funcao ccreateProduct', function () {
+  describe('Cadastro de um novo produto com a funcao createProduct', function () {
     it('Cadastrando um novo produto', async function () {
       // Arrange
       sinon.stub(connection, 'execute').resolves([{ insertId: 42 }]);
@@ -36,7 +36,6 @@ describe('Testando a camada  model ', function () {
       expect(result).to.equal(42);
     });
   });
-
   afterEach(function () {
     sinon.restore();
   });

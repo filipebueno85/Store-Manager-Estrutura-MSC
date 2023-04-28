@@ -60,13 +60,24 @@
     "colId": "history",
     "containerId": "",
     "name": "localhost:3001/products/16",
-    "url": "localhost:3001/sales/85",
+    "url": "localhost:3001/products/search?q=Martelo",
     "method": "GET",
     "sortNum": 0,
     "created": "2023-04-26T18:55:07.684Z",
-    "modified": "2023-04-27T23:16:27.519Z",
+    "modified": "2023-04-28T22:16:13.758Z",
     "headers": [],
-    "params": [],
+    "params": [
+      {
+        "name": "q",
+        "value": "Martelo",
+        "isPath": false
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \n}",
+      "form": []
+    },
     "tests": []
   },
   {
