@@ -60,11 +60,11 @@
     "colId": "history",
     "containerId": "",
     "name": "localhost:3001/products/16",
-    "url": "localhost:3001/products/16",
+    "url": "localhost:3001/sales/85",
     "method": "GET",
     "sortNum": 0,
     "created": "2023-04-26T18:55:07.684Z",
-    "modified": "2023-04-26T18:55:07.684Z",
+    "modified": "2023-04-27T23:16:27.519Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -86,6 +86,48 @@
       "raw": "[\n  {\n    \"productId\": 999,\n    \"quantity\": 1\n  }\n]",
       "form": []
     },
+    "tests": []
+  },
+  {
+    "_id": "d8d19234-ebb9-471e-80ae-618b8dd7558e",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3001/sales/1",
+    "url": "localhost:3001/sales/1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-28T11:44:07.240Z",
+    "modified": "2023-04-28T12:43:14.602Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "cd7165ae-8f0f-4be4-b2aa-d85f3124c4e2",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3001/sales/3",
+    "url": "localhost:3001/sales/3",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-28T11:44:51.970Z",
+    "modified": "2023-04-28T11:44:51.970Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "ecb706b0-b9dc-49a2-a0bf-0802dca7b7ac",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3001/sales/458",
+    "url": "localhost:3001/sales/458",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-28T12:31:44.391Z",
+    "modified": "2023-04-28T12:31:44.391Z",
+    "headers": [],
+    "params": [],
     "tests": []
   }
 ]
