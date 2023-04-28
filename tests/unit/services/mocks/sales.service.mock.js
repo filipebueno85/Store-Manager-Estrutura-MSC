@@ -59,6 +59,7 @@ const saleJson2 = [
 module.exports = {
   newSales,
   saleJson,
+  saleJson2,
   objSale,
   allSales,
 };

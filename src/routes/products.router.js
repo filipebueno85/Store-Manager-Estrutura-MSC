@@ -12,8 +12,10 @@ router.get('/products/:id', productsController.findProductById);
 router.post('/products', productNameValidate, productsController.createProduct);
 
 router.put('/products/:id',
-  productNameValidate,
-  productNotFoundValidate,
-  productsController.updateProductById);
+productNameValidate,
+productNotFoundValidate,
+productsController.updateProductById);
+
+router.delete('/products/:id', productNotFoundValidate, productsController.deleteProduct);
 
 module.exports = router;

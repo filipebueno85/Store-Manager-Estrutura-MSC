@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const sinon = require('sinon');
 const { salesModel } = require('../../../src/models');
-const { saleJson, objSale, newSales, allSales } = require('./mocks/sales.service.mock');
+const { saleJson, objSale, newSales, allSales, saleJson2 } = require('./mocks/sales.service.mock');
 const { salesService } = require('../../../src/services');
 
 describe('Testando a camada sales service ', function () {
@@ -11,7 +11,7 @@ describe('Testando a camada sales service ', function () {
       sinon.stub(salesModel, 'createSalesProduct').resolves(newSales);
 
 
-      const result = await salesService.createSalesProduct(saleJson);
+      const result = await salesService.createSalesProduct(saleJson2);
       console.log(result);
       expect(result.type).to.equal(null);
       expect(result.message).to.have.keys('id', 'itemsSold');
