@@ -44,10 +44,29 @@ const deleteSales = async (id) => {
   return { type: null, message: sales };
 };
 
+const updateSales = async (saleId, productArray) => {
+  const findSaleId = await Promise.all(productArray.map(async (product) => {
+    const productById = await productsModel.findProductById(product.productId);
+    return productById;
+  }));
+
+  if (findSaleId
+    .some((id) => id === undefined)) return { type: 404, message: 'Product not found' };
+  // const saleID = await salesModel.getSalesById(saleId);
+  await Promise.all(productArray.map(async (product) => {
+    const updateSalesProduct = await salesModel
+      .updateSales(saleId, product.productId, product.quantity);
+    return updateSalesProduct;
+  }));
+
+  return { type: null, message: { saleId, itemsUpdated: productArray } };
+};
+
 module.exports = {
   getAllSales,
   getSalesById,
   createSales,
   createSalesProduct,
   deleteSales,
+  updateSales,
 };
